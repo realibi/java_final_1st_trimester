@@ -79,4 +79,32 @@
         <servlet-name>ServletAddModerators</servlet-name>
         <url-pattern>/ServletAddModerators</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletListOfClubs</servlet-name>
+        <servlet-class>ListOfClubs.ServletListOfClubs</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletListOfClubs</servlet-name>
+        <url-pattern>/ServletListOfClubs</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletListOfNews</servlet-name>
+        <servlet-class>ListOfNews.ServletListOfNews</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletListOfNews</servlet-name>
+        <url-pattern>/ServletListOfNews</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletListOfEvents</servlet-name>
+        <servlet-class>ListOfEvents.ServletListOfEvents</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletListOfEvents</servlet-name>
+        <url-pattern>/ServletListOfEvents</url-pattern>
+    </servlet-mapping>
+
 </web-app>
