@@ -9,6 +9,40 @@ import java.util.Set;
 
 public class DBFindStudent extends GetConnection {
 
+    protected ArrayList<FindStudent> SelectAll() {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        ArrayList<FindStudent> FindStudentListAll = new ArrayList<>();
+
+        try {
+            connection = getConnection();
+            preparedStatement = connection.prepareStatement("select Students_Email, Students_name, Students_surname, Students_Major, Students_Group_number, Academic_Year, Students_Status from Student");
+
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                FindStudent findStudentByAll = new FindStudent();
+                findStudentByAll.setStudent_Email(resultSet.getString("Students_Email"));
+                findStudentByAll.setStudent_Name(resultSet.getString("Students_name"));
+                findStudentByAll.setStudent_Surname(resultSet.getString("Students_surname"));
+                findStudentByAll.setStudent_Major(resultSet.getString("Students_Major"));
+                findStudentByAll.setStudent_Group(resultSet.getString("Students_Group_number"));
+                findStudentByAll.setAcademicYear(resultSet.getInt("Academic_Year"));
+                findStudentByAll.setStudent_Status(resultSet.getString("Students_Status"));
+
+                FindStudentListAll.add(findStudentByAll);
+
+            }
+            resultSet.close();
+            preparedStatement.close();
+            connection.close();
+        }
+        catch (SQLException e){e.printStackTrace();}
+
+        return FindStudentListAll;
+
+    }
+
     protected ArrayList<FindStudent> FindStudentByNameAndSurname(String Name, String Surname){
 
         Connection connection = null;

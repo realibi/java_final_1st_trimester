@@ -1,6 +1,6 @@
 package CreateRequestClub;
 
-import AbstractClasses.GetCookies;
+import AbstractClasses.GetSession;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,17 +14,15 @@ import java.util.HashMap;
 @WebServlet(name = "ServletCreateRequestClub")
 public class ServletCreateRequestClub extends HttpServlet {
     DBCreateClubRequest dbCreateClubRequest = new DBCreateClubRequest();
+    GetSession gs = new GetSession();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String TitleOfClub = request.getParameter("TitleOfClub");
         String Description = request.getParameter("DescriptionOfClub");
+        dbCreateClubRequest.InsertToAdmin(gs.GetIdSession(request,response));
 
-        GetCookies gc = new GetCookies();
-
-        String Email = gc.GetEmailCookies(request, response);
-        HashMap<String, String> hashMap = (HashMap<String, String>) dbCreateClubRequest.SelectNameAndSurname(Email);
-
-        dbCreateClubRequest.InsertInfoToRequestClub(TitleOfClub, Email, hashMap.get("Name"), hashMap.get("Surname"), Description);
+        int Id = dbCreateClubRequest.SelectAdminId(gs.GetIdSession(request, response));
+        dbCreateClubRequest.InsertInfoToRequestClub(TitleOfClub, Description, Id);
 
 
     }

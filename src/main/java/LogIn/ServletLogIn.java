@@ -14,20 +14,17 @@ public class ServletLogIn extends HttpServlet {
 
         String Email = request.getParameter("Student_Email");
         String Password = request.getParameter("Student_Password");
-        HttpSession session = request.getSession();
-
-
-
+        Integer Id = logIn.SelectId(Email, Password);
+        Integer MajorsId = logIn.SelectIdForMajorAdmin(Email, Password);
 
         boolean checking = logIn.SelectPasswordAndEmail(Email, Password);
         boolean checkingAdmin = logIn.CheckingForMajorAdmin(Email, Password);
 
         if(checking) {
 
-
-            Cookie cookieEmail = new Cookie("Email", Email);
-            cookieEmail.setMaxAge(24 * 60 * 60);
-            response.addCookie(cookieEmail);
+            HttpSession session = request.getSession();
+            session.setAttribute("Id", Id);
+            session.setMaxInactiveInterval(-1);
 
             String StatusChecking = logIn.CheckingStatus(Email);
 
@@ -37,10 +34,6 @@ public class ServletLogIn extends HttpServlet {
                     break;
 
                 case ("Admin"):
-                    String ClubTitle = logIn.SelectClubTitle(Email);
-                    Cookie cookieClubTitle = new Cookie("ClubTitle", ClubTitle);
-                    cookieEmail.setMaxAge(24 * 60 * 60);
-                    response.addCookie(cookieClubTitle);
                     request.getRequestDispatcher("Admin/Admin.jsp").forward(request, response);
                     break;
 
@@ -52,9 +45,9 @@ public class ServletLogIn extends HttpServlet {
         }
 
         else if(checkingAdmin){
-            Cookie cookieEmail = new Cookie("Email", Email);
-            cookieEmail.setMaxAge(24 * 60 * 60);
-            response.addCookie(cookieEmail);
+            HttpSession session = request.getSession();
+            session.setAttribute("Id", MajorsId);
+            session.setMaxInactiveInterval(-1);
 
             request.getRequestDispatcher("MajorAdmin/MajorAdmin.jsp").forward(request, response);
         }

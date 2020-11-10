@@ -1,7 +1,4 @@
 package FindStudent;
-
-import AbstractClasses.GetCookies;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,12 +10,13 @@ import java.util.ArrayList;
 @WebServlet(name = "ServletOutPutListOfStudents")
 public class ServletOutPutListOfStudents extends HttpServlet {
     DBFindStudent db = new DBFindStudent();
-    GetCookies gc = new GetCookies();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String SelectMajors = request.getParameter("SelectMajors");
         String SelectGroups = request.getParameter("SelectGroups");
         String SelectYear = request.getParameter("SelectYear");
         String Search = request.getParameter("searchUser");
+
+
         ArrayList<FindStudent> KeyList;
         if(Search != null) {
             String SearchUser = Search.trim();

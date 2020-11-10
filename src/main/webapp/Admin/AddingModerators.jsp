@@ -41,9 +41,6 @@
     <input type="text" value="${Info.student_Major}">
     <input type="text" value="${Info.student_Group}">
     <input type="number" value="${Info.academicYear}">
-    <c:if test = "${Info.student_Status == 'Moderator'}" >
-        <input type="submit" name="Action" value="Delete this Moderator">
-    </c:if>
     <c:if test = "${Info.student_Status == 'User'}" >
         <input type = "submit" name="Action" value = "Make this User Moderator" ><br >
     </c:if>

@@ -9,20 +9,18 @@ import java.util.Map;
 
 public class DBCreateClubRequest extends GetConnection {
 
-    protected void InsertInfoToRequestClub(String Title, String Email,  String Name, String Surname, String Description){
+    protected void InsertInfoToRequestClub(String Club_Title, String Club_Description, int User_id){
 
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
         try {
             connection = getConnection();
-            preparedStatement = connection.prepareStatement("INSERT into requestclub(Club_Title, Owners_Email, Owners_Name, Owners_Surname, Club_Description) value (?, ?, ?, ?, ?)");
+            preparedStatement = connection.prepareStatement("INSERT into requestclub(Club_Title, Club_Description, Admin_id) value (?, ?, ?)");
 
-            preparedStatement.setString(1, Title);
-            preparedStatement.setString(2, Email);
-            preparedStatement.setString(3, Name);
-            preparedStatement.setString(4, Surname);
-            preparedStatement.setString(5, Description);
+            preparedStatement.setString(1, Club_Title);
+            preparedStatement.setString(2, Club_Description);
+            preparedStatement.setInt(3, User_id);
 
             preparedStatement.executeUpdate();
 
@@ -30,32 +28,46 @@ public class DBCreateClubRequest extends GetConnection {
             connection.close();
         }
         catch (SQLException e){e.printStackTrace();}
-
-
     }
 
-    protected Map<String,String> SelectNameAndSurname(String Email){
+    protected void InsertToAdmin(int Admin_id) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
 
+        try {
+            connection = getConnection();
+            preparedStatement = connection.prepareStatement("insert into admin(Student_id) value(?)");
+            preparedStatement.setInt(1, Admin_id);
+            preparedStatement.executeUpdate();
+
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    protected int SelectAdminId(int Student_id) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
-        HashMap<String, String> NameAndSurname = new HashMap<>();
+        int Id = 0;
+
         try {
             connection = getConnection();
-            preparedStatement = connection.prepareStatement("SELECT Students_name, Students_surname from student where Students_Email = ?");
-
-            preparedStatement.setString(1, Email);
-
+            preparedStatement = connection.prepareStatement("SELECT Id from admin where Student_id =?");
+            preparedStatement.setInt(1, Student_id);
             resultSet = preparedStatement.executeQuery();
             resultSet.next();
 
-            NameAndSurname.put("Name",resultSet.getString("Students_name"));
-            NameAndSurname.put("Surname",resultSet.getString("Students_surname"));
-
+            Id = resultSet.getInt("Id");
+            resultSet.close();
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        catch (SQLException e){e.printStackTrace();}
-
-        return NameAndSurname;
+        return Id;
     }
 
 

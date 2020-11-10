@@ -1,6 +1,5 @@
 package ChangePassword;
-
-import AbstractClasses.GetCookies;
+import AbstractClasses.GetSession;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,13 +16,13 @@ public class ServletChangePassword extends HttpServlet {
         String NewPassword = request.getParameter("NewPassword");
         String RepeatedPassword = request.getParameter("RepeatedPassword");
 
-        GetCookies gc = new GetCookies();
+        GetSession getSession = new GetSession();
         DBChangePassword dbChangePassword = new DBChangePassword();
 
-        String Email = gc.GetEmailCookies(request,response);
-        boolean checkingOldPassword = dbChangePassword.SelectPasswordAndEmail(Email, OldPassword);
+        int Id = getSession.GetIdSession(request,response);
+        boolean checkingOldPassword = dbChangePassword.SelectPasswordAndEmail(Id, OldPassword);
 
-        if(checkingOldPassword && NewPassword.equals(RepeatedPassword)){dbChangePassword.ChangePassword(Email, NewPassword);}
+        if(checkingOldPassword && NewPassword.equals(RepeatedPassword)){dbChangePassword.ChangePassword(Id, NewPassword);}
 
 
     }

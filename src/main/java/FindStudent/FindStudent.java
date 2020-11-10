@@ -9,6 +9,7 @@ public class FindStudent {
      String Student_Group;
      int AcademicYear;
      String Student_Status;
+     String Club_Title;
 
     public String getStudent_Email() {
         return Student_Email;
