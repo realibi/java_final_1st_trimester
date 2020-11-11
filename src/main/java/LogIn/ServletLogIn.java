@@ -3,6 +3,7 @@ package LogIn;
 import AbstractClasses.GetSession;
 import ListOfClubs.ServletListOfClubs;
 import LogIn.DBLogIn;
+import MajorAdmin.ServletListOfClubsForMajor;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -51,7 +52,8 @@ public class ServletLogIn extends HttpServlet {
                 session.setAttribute("Id", MajorsId);
                 session.setMaxInactiveInterval(-1);
 
-                request.getRequestDispatcher("MajorAdmin/MajorAdmin.jsp").forward(request, response);
+                ServletListOfClubsForMajor ser = new ServletListOfClubsForMajor();
+                ser.doPost(request, response);
             }
 
 

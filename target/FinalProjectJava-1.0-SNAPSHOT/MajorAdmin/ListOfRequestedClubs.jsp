@@ -12,10 +12,15 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Hello</h1>
-<form method="post" action="<%=request.getContextPath()%>/ServletSelectRequestedClubsParameters">
-<input type="submit">
+
+<form method="post" action="<%=request.getContextPath()%>/ServletListOfClubsForMajor">
+    <input type="submit" value="back">
 </form>
+
+<form method="post" action="<%=request.getContextPath()%>/ServletLogOut">
+    <input type="submit" value="Log out">
+</form>
+
 <c:forEach var="RequestParameters" items="${Parameters}">
     <form method="post" action="<%=request.getContextPath()%>/ServletAddOrDeleteRequestedClubs">
     <input type="text" name="RequestedClubTitle" value="${RequestParameters.title}"><br>

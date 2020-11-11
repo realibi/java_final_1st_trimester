@@ -34,6 +34,9 @@ public class ServletAddOrDeleteRequestedClubs extends HttpServlet {
                 break;
         }
 
+        ServletSelectRequestedClubsParameters ser = new ServletSelectRequestedClubsParameters();
+        ser.doPost(request, response);
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

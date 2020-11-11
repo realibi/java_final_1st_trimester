@@ -315,4 +315,85 @@
         <url-pattern>/ServletLogOut</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ServletListOfClubsForMajor</servlet-name>
+        <servlet-class>MajorAdmin.ServletListOfClubsForMajor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletListOfClubsForMajor</servlet-name>
+        <url-pattern>/ServletListOfClubsForMajor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletUpdateClub</servlet-name>
+        <servlet-class>MajorAdmin.ServletUpdateClub</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUpdateClub</servlet-name>
+        <url-pattern>/ServletUpdateClub</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDeleteClubForMajor</servlet-name>
+        <servlet-class>MajorAdmin.ServletDeleteClubForMajor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDeleteClubForMajor</servlet-name>
+        <url-pattern>/ServletDeleteClubForMajor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletSelectNewsForMajor</servlet-name>
+        <servlet-class>MajorAdmin.ServletSelectNewsForMajor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletSelectNewsForMajor</servlet-name>
+        <url-pattern>/ServletSelectNewsForMajor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletUpdateNewsForMajor</servlet-name>
+        <servlet-class>MajorAdmin.ServletUpdateNewsForMajor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUpdateNewsForMajor</servlet-name>
+        <url-pattern>/ServletUpdateNewsForMajor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDeleteNewsForMajor</servlet-name>
+        <servlet-class>MajorAdmin.ServletDeleteNewsForMajor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDeleteNewsForMajor</servlet-name>
+        <url-pattern>/ServletDeleteNewsForMajor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletEventsForMajor</servlet-name>
+        <servlet-class>MajorAdmin.ServletEventsForMajor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletEventsForMajor</servlet-name>
+        <url-pattern>/ServletEventsForMajor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletUpdateEventForMajor</servlet-name>
+        <servlet-class>MajorAdmin.ServletUpdateEventForMajor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUpdateEventForMajor</servlet-name>
+        <url-pattern>/ServletUpdateEventForMajor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDeleteEventsForMajor</servlet-name>
+        <servlet-class>MajorAdmin.ServletDeleteEventsForMajor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDeleteEventsForMajor</servlet-name>
+        <url-pattern>/ServletDeleteEventsForMajor</url-pattern>
+    </servlet-mapping>
+
 </web-app>
