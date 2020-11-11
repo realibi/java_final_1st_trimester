@@ -11,6 +11,9 @@
     <title>Title</title>
 </head>
 <body>
+<form method="post" action="<%=request.getContextPath()%>/ServletListOfClubs">
+    <input type="submit" value="Back">
+</form>
 <form method="post" action="<%=request.getContextPath()%>/ServletChangePassword">
         <input type="password" name="OldPassword" placeholder="OldPassword">
 

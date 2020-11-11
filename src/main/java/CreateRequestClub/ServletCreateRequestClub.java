@@ -1,6 +1,7 @@
 package CreateRequestClub;
 
 import AbstractClasses.GetSession;
+import ListOfClubs.ServletListOfClubs;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,7 +25,8 @@ public class ServletCreateRequestClub extends HttpServlet {
         int Id = dbCreateClubRequest.SelectAdminId(gs.GetIdSession(request, response));
         dbCreateClubRequest.InsertInfoToRequestClub(TitleOfClub, Description, Id);
 
-        request.getRequestDispatcher("General/ListOfClubs.jsp").forward(request,response);
+        ServletListOfClubs servletListOfClubs = new ServletListOfClubs();
+        servletListOfClubs.doPost(request,response);
 
 
     }
