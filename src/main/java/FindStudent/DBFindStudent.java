@@ -1,6 +1,7 @@
 package FindStudent;
 
 import AbstractClasses.GetConnection;
+import AddModerators.ListOfModerators;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -415,5 +416,82 @@ public class DBFindStudent extends GetConnection {
         return FindStudentListByGroup ;
 
     }
+    protected ArrayList<ListOfModerators> SelectAllModeratorsByClub(int Club_id) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        ArrayList<ListOfModerators> arrayList = new ArrayList<>();
+        try {
+            connection = getConnection();
+            preparedStatement = connection.prepareStatement("select Students_name, Students_surname, Students_Email from Student inner join Moderators on Student.id = Moderators.Student_id where Moderators.Clubs_Id = ?");
+            preparedStatement.setInt(1, Club_id);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                ListOfModerators listOfModerators = new ListOfModerators();
+
+                listOfModerators.setName(resultSet.getString("Students_name"));
+                listOfModerators.setSurname(resultSet.getString("Students_surname"));
+                listOfModerators.setEmail(resultSet.getString("Students_Email"));
+
+                arrayList.add(listOfModerators);
+            }
+            preparedStatement.close();
+            resultSet.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return arrayList;
+    }
+
+    protected int SelectAdminId(int Student_id) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        int Id = 0;
+
+        try {
+            connection = getConnection();
+            preparedStatement = connection.prepareStatement("SELECT Id from admin where Student_id =?");
+            preparedStatement.setInt(1, Student_id);
+            resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+
+            Id = resultSet.getInt("Id");
+            resultSet.close();
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return Id;
+    }
+    protected int SelectClub_id(int Admin_id) {
+
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        int Club_id = 0;
+
+        try {
+            connection = getConnection();
+            preparedStatement = connection.prepareStatement("Select Id from listofclubs where Admin_id = ?;");
+            preparedStatement.setInt(1, Admin_id);
+            resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+
+            Club_id = resultSet.getInt("Id");
+            resultSet.close();
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return Club_id;
+
+    }
+
 
 }

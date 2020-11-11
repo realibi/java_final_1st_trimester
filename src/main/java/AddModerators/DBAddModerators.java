@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class DBAddModerators extends GetConnection {
 
@@ -129,44 +130,6 @@ public class DBAddModerators extends GetConnection {
 
     }
 
-    protected boolean DeleteModerator(int Student_id) {
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-        boolean check = false;
-
-        try {
-            connection = getConnection();
-            preparedStatement = connection.prepareStatement("delete from moderators where Student_id =?");
-            preparedStatement.setInt(1, Student_id);
-            preparedStatement.executeUpdate();
-            check = true;
-
-            preparedStatement.close();
-            connection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return check;
-    }
-
-    protected void ChangeStatusToUser(int Id) {
-
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-
-        try {
-            connection = getConnection();
-            preparedStatement = connection.prepareStatement("Update student set Students_status = 'User' where id =?");
-            preparedStatement.setInt(1, Id);
-            preparedStatement.executeUpdate();
-
-            preparedStatement.close();
-            connection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-    }
 
     protected boolean CheckForCountOfModerators(int Club_id) {
         Connection connection = null;
@@ -191,5 +154,42 @@ public class DBAddModerators extends GetConnection {
             e.printStackTrace();
         }
         return check;
+    }
+
+    protected void DeleteModerator(int Student_id) {
+
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            connection = getConnection();
+            preparedStatement = connection.prepareStatement("delete from moderators where Student_id =?");
+            preparedStatement.setInt(1, Student_id);
+            preparedStatement.executeUpdate();
+
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+    protected void ChangeStatusToUser(int Id) {
+
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            connection = getConnection();
+            preparedStatement = connection.prepareStatement("Update student set Students_status = 'User' where id =?");
+            preparedStatement.setInt(1, Id);
+            preparedStatement.executeUpdate();
+
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 }

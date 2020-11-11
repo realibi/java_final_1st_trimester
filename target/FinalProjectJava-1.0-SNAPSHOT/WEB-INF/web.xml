@@ -79,4 +79,240 @@
         <servlet-name>ServletAddModerators</servlet-name>
         <url-pattern>/ServletAddModerators</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletListOfClubs</servlet-name>
+        <servlet-class>ListOfClubs.ServletListOfClubs</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletListOfClubs</servlet-name>
+        <url-pattern>/ServletListOfClubs</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletListOfNews</servlet-name>
+        <servlet-class>ListOfNews.ServletListOfNews</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletListOfNews</servlet-name>
+        <url-pattern>/ServletListOfNews</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletListOfEvents</servlet-name>
+        <servlet-class>ListOfEvents.ServletListOfEvents</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletListOfEvents</servlet-name>
+        <url-pattern>/ServletListOfEvents</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDeleteModerator</servlet-name>
+        <servlet-class>AddModerators.ServletDeleteModerator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDeleteModerator</servlet-name>
+        <url-pattern>/ServletDeleteModerator</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletClubsByAdmin</servlet-name>
+        <servlet-class>ListOfClubByAdmin.ServletClubsByAdmin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletClubsByAdmin</servlet-name>
+        <url-pattern>/ServletClubsByAdmin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDeleteClub</servlet-name>
+        <servlet-class>ListOfClubByAdmin.ServletDeleteClub</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDeleteClub</servlet-name>
+        <url-pattern>/ServletDeleteClub</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletNewsByClub</servlet-name>
+        <servlet-class>NewsByClub.ServletNewsByClub</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletNewsByClub</servlet-name>
+        <url-pattern>/ServletNewsByClub</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDeleteNews</servlet-name>
+        <servlet-class>NewsByClub.ServletDeleteNews</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDeleteNews</servlet-name>
+        <url-pattern>/ServletDeleteNews</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletUpdateNews</servlet-name>
+        <servlet-class>NewsByClub.ServletUpdateNews</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUpdateNews</servlet-name>
+        <url-pattern>/ServletUpdateNews</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletCreateNews</servlet-name>
+        <servlet-class>NewsByClub.ServletCreateNews</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletCreateNews</servlet-name>
+        <url-pattern>/ServletCreateNews</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletUpdateEvents</servlet-name>
+        <servlet-class>EventsByClub.ServletUpdateEvents</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUpdateEvents</servlet-name>
+        <url-pattern>/ServletUpdateEvents</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletEventsByClub</servlet-name>
+        <servlet-class>EventsByClub.ServletEventsByClub</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletEventsByClub</servlet-name>
+        <url-pattern>/ServletEventsByClub</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDeleteEvents</servlet-name>
+        <servlet-class>EventsByClub.ServletDeleteEvents</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDeleteEvents</servlet-name>
+        <url-pattern>/ServletDeleteEvents</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletCreateEvents</servlet-name>
+        <servlet-class>EventsByClub.ServletCreateEvents</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletCreateEvents</servlet-name>
+        <url-pattern>/ServletCreateEvents</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletListOfClubsByModerator</servlet-name>
+        <servlet-class>ListOfClubsByModerator.ServletListOfClubsByModerator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletListOfClubsByModerator</servlet-name>
+        <url-pattern>/ServletListOfClubsByModerator</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletUpdateClubByModerator</servlet-name>
+        <servlet-class>ListOfClubsByModerator.ServletUpdateClubByModerator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUpdateClubByModerator</servlet-name>
+        <url-pattern>/ServletUpdateClubByModerator</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ServletNewsByModerator</servlet-name>
+        <servlet-class>NewsByModerator.ServletNewsByModerator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletNewsByModerator</servlet-name>
+        <url-pattern>/ServletNewsByModerator</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletCreateNewsByModerator</servlet-name>
+        <servlet-class>NewsByModerator.ServletCreateNewsByModerator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletCreateNewsByModerator</servlet-name>
+        <url-pattern>/ServletCreateNewsByModerator</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletUpdateNewsByModerator</servlet-name>
+        <servlet-class>NewsByModerator.ServletUpdateNewsByModerator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUpdateNewsByModerator</servlet-name>
+        <url-pattern>/ServletUpdateNewsByModerator</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDeleteNewsByModerator</servlet-name>
+        <servlet-class>NewsByModerator.ServletDeleteNewsByModerator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDeleteNewsByModerator</servlet-name>
+        <url-pattern>/ServletDeleteNewsByModerator</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletEventsByModerator</servlet-name>
+        <servlet-class>EventsByModerator.ServletEventsByModerator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletEventsByModerator</servlet-name>
+        <url-pattern>/ServletEventsByModerator</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletCreateEventsByModerator</servlet-name>
+        <servlet-class>EventsByModerator.ServletCreateEventsByModerator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletCreateEventsByModerator</servlet-name>
+        <url-pattern>/ServletCreateEventsByModerator</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletUpdateEventsByModerator</servlet-name>
+        <servlet-class>EventsByModerator.ServletUpdateEventsByModerator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUpdateEventsByModerator</servlet-name>
+        <url-pattern>/ServletUpdateEventsByModerator</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDeleteEventsByModerator</servlet-name>
+        <servlet-class>EventsByModerator.ServletDeleteEventsByModerator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDeleteEventsByModerator</servlet-name>
+        <url-pattern>/ServletDeleteEventsByModerator</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletUpdateClubByAdmin</servlet-name>
+        <servlet-class>ListOfClubByAdmin.ServletUpdateClubByAdmin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUpdateClubByAdmin</servlet-name>
+        <url-pattern>/ServletUpdateClubByAdmin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletLogOut</servlet-name>
+        <servlet-class>LogOut.ServletLogOut</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletLogOut</servlet-name>
+        <url-pattern>/ServletLogOut</url-pattern>
+    </servlet-mapping>
+
 </web-app>

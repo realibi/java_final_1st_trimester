@@ -24,6 +24,8 @@ public class ServletCreateRequestClub extends HttpServlet {
         int Id = dbCreateClubRequest.SelectAdminId(gs.GetIdSession(request, response));
         dbCreateClubRequest.InsertInfoToRequestClub(TitleOfClub, Description, Id);
 
+        request.getRequestDispatcher("General/ListOfClubs.jsp").forward(request,response);
+
 
     }
 

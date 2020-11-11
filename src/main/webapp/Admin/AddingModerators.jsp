@@ -7,6 +7,36 @@
     <title>Title</title>
 </head>
 <body>
+
+<form method="post" action="<%=request.getContextPath()%>/ServletLogOut">
+    <input type="submit" value="logOut">
+</form>
+
+<form method="post" action="<%=request.getContextPath()%>/ServletListOfClubs">
+    <input type="submit" value="Back">
+</form>
+
+<table border="1">
+
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Email</th>
+        <th>Delete</th>
+    </tr>
+    <c:forEach var="List" items="${ListOfModerators}">
+        <form method="post" action="<%=request.getContextPath()%>/ServletDeleteModerator">
+    <tr>
+        <td>${List.name}</td>
+        <td>${List.surname}</td>
+        <td><input type="email" name="Email" value="${List.email}"></td>
+        <th><input type="submit" name="delete" value="delete"></th>
+    </tr>
+        </form>
+    </c:forEach>
+</table>
+
+
 <form method="post" action="<%=request.getContextPath()%>/ServletOutPutListOfStudents">
 <input type="search" name="searchUser"><br>
 <select name="SelectMajors">
@@ -28,9 +58,6 @@
 </c:forEach>
 </select><br>
     <input type="submit">
-</form>
-<form method="post" action="<%=request.getContextPath()%>/ServletFindStudent">
-<input type="submit" value="ASD">
 </form>
 
 <c:forEach var="Info" items="${key}">

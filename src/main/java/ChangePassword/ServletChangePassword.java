@@ -24,7 +24,7 @@ public class ServletChangePassword extends HttpServlet {
 
         if(checkingOldPassword && NewPassword.equals(RepeatedPassword)){dbChangePassword.ChangePassword(Id, NewPassword);}
 
-
+        request.getRequestDispatcher("General/ChangePassword.jsp").forward(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

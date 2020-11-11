@@ -1,8 +1,7 @@
 package AddModerators;
 
 import AbstractClasses.GetSession;
-import CreateRequestClub.DBCreateClubRequest;
-import FindStudent.DBFindStudent;
+import FindStudent.ServletFindStudent;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 @WebServlet(name = "ServletAddModerators")
 public class ServletAddModerators extends HttpServlet {
@@ -35,12 +35,9 @@ public class ServletAddModerators extends HttpServlet {
                 }
             }
       }
-      if(Action.equals("Delete this Moderator")){
 
-          boolean check = db.DeleteModerator(Student_id);
-          if(check){db.ChangeStatusToUser(Student_id);}
-       }
-
+      ServletFindStudent findStudent = new ServletFindStudent();
+      findStudent.doPost(request,response);
 
     }
 

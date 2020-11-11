@@ -1,5 +1,7 @@
 package LogIn;
 
+import AbstractClasses.GetSession;
+import ListOfClubs.ServletListOfClubs;
 import LogIn.DBLogIn;
 
 import javax.servlet.ServletException;
@@ -12,48 +14,48 @@ public class ServletLogIn extends HttpServlet {
     DBLogIn logIn = new DBLogIn();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String Email = request.getParameter("Student_Email");
-        String Password = request.getParameter("Student_Password");
-        Integer Id = logIn.SelectId(Email, Password);
-        Integer MajorsId = logIn.SelectIdForMajorAdmin(Email, Password);
 
-        boolean checking = logIn.SelectPasswordAndEmail(Email, Password);
-        boolean checkingAdmin = logIn.CheckingForMajorAdmin(Email, Password);
+            String Email = request.getParameter("Student_Email");
+            String Password = request.getParameter("Student_Password");
+            Integer Id = logIn.SelectId(Email, Password);
+            Integer MajorsId = logIn.SelectIdForMajorAdmin(Email, Password);
+            ServletListOfClubs servletListOfClubs = new ServletListOfClubs();
 
-        if(checking) {
+            boolean checking = logIn.SelectPasswordAndEmail(Email, Password);
+            boolean checkingAdmin = logIn.CheckingForMajorAdmin(Email, Password);
 
-            HttpSession session = request.getSession();
-            session.setAttribute("Id", Id);
-            session.setMaxInactiveInterval(-1);
+            if (checking) {
 
-            String StatusChecking = logIn.CheckingStatus(Email);
+                HttpSession session = request.getSession();
+                session.setAttribute("Id", Id);
+                session.setMaxInactiveInterval(-1);
 
-            switch (StatusChecking) {
-                case ("User"):
-                    request.getRequestDispatcher("User/User.jsp").forward(request, response);
-                    break;
+                String StatusChecking = logIn.CheckingStatus(Email);
 
-                case ("Admin"):
-                    request.getRequestDispatcher("Admin/Admin.jsp").forward(request, response);
-                    break;
+                switch (StatusChecking) {
+                    case ("User"):
+                        servletListOfClubs.doPost(request, response);
+                        break;
 
-                case ("Moderator"):
-                    request.getRequestDispatcher("Moderator/Moderator.jsp").forward(request, response);
-                    break;
+                    case ("Admin"):
+                        servletListOfClubs.doPost(request, response);
+                        break;
+
+                    case ("Moderator"):
+                        servletListOfClubs.doPost(request, response);
+                        break;
+                }
+
+            } else if (checkingAdmin) {
+                HttpSession session = request.getSession();
+                session.setAttribute("Id", MajorsId);
+                session.setMaxInactiveInterval(-1);
+
+                request.getRequestDispatcher("MajorAdmin/MajorAdmin.jsp").forward(request, response);
             }
 
+
         }
-
-        else if(checkingAdmin){
-            HttpSession session = request.getSession();
-            session.setAttribute("Id", MajorsId);
-            session.setMaxInactiveInterval(-1);
-
-            request.getRequestDispatcher("MajorAdmin/MajorAdmin.jsp").forward(request, response);
-        }
-
-
-    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
