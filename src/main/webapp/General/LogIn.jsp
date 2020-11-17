@@ -1,17 +1,18 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-<form method="post" action="<%=request.getContextPath()%>/ServletLogIn">
-    <label>
-        <input type="Email" name="Student_Email">
-    </label>
-    <label>
-        <input type="password" name="Student_Password">
-    </label>
-    <input type="submit">
-</form>
-</body>
-</html>
+<%@include file="/global/header.jsp"%>
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/login.css"/>
+
+<div class="loginBlock">
+    <img src="<%=request.getContextPath()%>/resources/img/logo.png" alt="" style="width: 70px; height: 70px; border: 1px solid transparent; border-radius: 16px;">
+    <br><br>
+    <form method="post" action="<%=request.getContextPath()%>/ServletLogIn">
+        <p>Email:</p>
+        <input type="text" id="email" name="Student_Email"> <br><br>
+
+        <p>Password:</p>
+        <input type="password" id="password" name="Student_Password"> <br><br><br>
+
+        <input type="submit" id="loginBtn" value="Log in">
+    </form>
+</div>
+
+<%@include file="/global/footer.jsp"%>

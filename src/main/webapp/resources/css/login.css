@@ -1,0 +1,32 @@
+.loginBlock{
+    width: 55%;
+    text-align: center;
+    padding: 2%;
+    border-radius: 16px;
+    margin-top: 20vh;
+    background-color: rgb(25, 39, 52);
+}
+
+.loginBlock input[type='submit']{
+    color: #fff;
+    width: 50%;
+    background-color: #17a3f2;
+}
+
+.loginBlock button{
+    color: #fff;
+    width: 50%;
+    background-color: #17a3f2;
+}
+
+.loginBlock p{
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+}
+
+.loginBlock input{
+    border: 1px solid transparent;
+    border-radius: 16px;
+    width: 70%;
+}

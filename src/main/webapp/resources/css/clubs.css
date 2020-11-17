@@ -1,0 +1,83 @@
+.club-item{
+    width: 100%;
+    height: auto;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    background-color: #147db9;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.club-item:hover{
+    box-shadow: 0 0 13px rgb(56, 68, 77);
+}
+
+.club-name{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.club-owner{
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.club-join-button{
+    width: 100%;
+    text-align: center;
+}
+
+.club-join-button button{
+    width: 70%;
+    color: #17a3f2;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 2%;
+}
+
+.subscribed-clubs{
+    width: 100%;
+    padding: 3%;
+}
+
+.subscribed-club-item{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.subscribed-club-name{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+    padding: 1% 0 1% 0;
+}
+
+.subscribed-club-leave-btn button{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    padding: 1% 5% 1% 5%;
+    width: auto;
+    background-color: #EF4B4C;
+}
+
+.subscribed-club-leave-btn{
+    text-align: right;
+}

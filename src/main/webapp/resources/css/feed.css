@@ -1,0 +1,96 @@
+.feed-block{
+    width: 100%;
+    min-height: 90vh;
+    color: #fff;
+    border-left: 1px solid rgb(56, 68, 77);
+    border-right: 1px solid rgb(56, 68, 77);
+    border-bottom: 1px solid rgb(56, 68, 77);
+    border-radius: 0 0 16px 16px;
+    padding: 3%;
+}
+
+.feed-item{
+    height: auto;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    border-bottom: 1px solid rgb(56, 68, 77);
+}
+
+.feed-top{
+    height: auto;
+    margin-bottom: 2%;
+
+    display: grid;
+    grid-template-areas: 'title title title author-date';
+    width: 100%;
+}
+
+.feed-content{
+    margin-bottom: 2%;
+}
+
+.feed-title{
+    grid-area: title;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.feed-author-date{
+    grid-area: author-date;
+    display: grid;
+    grid-template-areas: 'author date';
+    font-size: 16px;
+    color: darkgrey;
+    text-align: right;
+    font-weight: bold;
+}
+
+.feed-author{
+    text-align: left;
+}
+
+.feed-date{
+    text-align: right;
+}
+
+.feed-text{
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    margin-bottom: 3%;
+}
+
+.feed-image{
+    width: 100%;
+    height: auto;
+}
+
+.feed-image img{
+    width: 100%;
+}
+
+#news-type, #event-type{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 2%;
+    cursor: pointer;
+}
+
+.active{
+    background-color: #17a3f2;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    padding: 2%;
+}
+
+.feed-title button{
+    width: auto;
+    height: 20px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #EF4B4C;
+}
