@@ -49,6 +49,14 @@ a:hover{
     color: #fff;
 }
 
+.formButton{
+    width: auto;
+    height: auto;
+    padding: 2%;
+    background-color: #17a3f2;
+    color: white;
+}
+
 .nav-bar button{
     font-size: 16px;
     color: #fff;
@@ -57,7 +65,7 @@ a:hover{
     padding: 2%;
 }
 
-.nav-bar input, textarea, button{
+.nav-bar input, textarea{
     width: 100%;
     border: 1px solid transparent;
     border-radius: 16px;

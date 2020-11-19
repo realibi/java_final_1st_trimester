@@ -1,20 +1,18 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="/global/header.jsp"%>
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/feed.css"/>
+    <div class="col-12">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/feed.css"/>
 
-<form method="post" action="<%=request.getContextPath()%>/ServletLogOut">
-    <input type="submit" value="logOut">
-</form>
+        <form method="post" action="<%=request.getContextPath()%>/ServletLogOut">
+            <input style="width: 100%;" class="btn btn-primary" type="submit" value="logOut">
+        </form>
 
-<form method="post" action="<%=request.getContextPath()%>/ServletSelectRequestedClubsParameters">
-    <input type="submit" value="Requested Clubs">
-</form>
+        <form method="post" action="<%=request.getContextPath()%>/ServletSelectRequestedClubsParameters">
+            <input style="width: 100%;" class="btn btn-primary" type="submit" value="Requested Clubs">
+        </form>
 
-
-<div class="row">
-    <div class="col-md-8 col-sm-9 col-xs-12">
         <div class="title-block">
-            Feed
+            Clubs
         </div>
 
         <div class="feed-block">
@@ -41,7 +39,7 @@
                             <div class="club-buttons">
                                 <div class="row">
                                     <div class="col-12">
-                                        <button type="submit" name="Update" value="${Clubs.id}">Update</button>
+                                        <button style="width: 100%;" class="btn btn-primary" type="submit" name="Update" value="${Clubs.id}">Update</button>
                                     </div>
                                 </div>
                             </div>
@@ -50,19 +48,19 @@
                             <div class="row">
                                 <div class="col-12">
                                     <form method="post" action="<%=request.getContextPath()%>/ServletDeleteClubForMajor">
-                                        <button type="submit" name="Delete" value="${Clubs.id}">Delete</button>
+                                        <button style="width: 100%;" class="btn btn-primary" type="submit" name="Delete" value="${Clubs.id}">Delete</button>
                                     </form>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-6">
                                     <form method="post" action="<%=request.getContextPath()%>/ServletSelectNewsForMajor">
-                                        <button type="submit" name="NEWS" value="${Clubs.id}">NEWS</button>
+                                        <button style="width: 100%;" class="btn btn-primary" type="submit" name="NEWS" value="${Clubs.id}">NEWS</button>
                                     </form>
                                 </div>
                                 <div class="col-6">
                                     <form method="post" action="<%=request.getContextPath()%>/ServletEventsForMajor">
-                                        <button type="submit" name="EVENTS" value="${Clubs.id}">EVENTS</button>
+                                        <button style="width: 100%;" class="btn btn-primary" type="submit" name="EVENTS" value="${Clubs.id}">EVENTS</button>
                                     </form>
                                 </div>
                             </div>

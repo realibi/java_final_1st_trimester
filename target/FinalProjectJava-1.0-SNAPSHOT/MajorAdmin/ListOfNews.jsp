@@ -12,17 +12,17 @@
 </style>
 
 <form method="post" action="<%=request.getContextPath()%>/ServletLogOut">
-    <input type="submit" value="logOut">
+    <input style="width: 100%;" class="btn btn-primary"  type="submit" value="logOut">
 </form>
 
 <form method="post" action="<%=request.getContextPath()%>/ServletListOfClubsForMajor">
-    <input type="submit" value="Back">
+    <input style="width: 100%;" class="btn btn-primary"  type="submit" value="Back">
 </form>
 
 <div class="row">
     <div class="col-md-8 col-sm-9 col-xs-12">
         <div class="title-block">
-            Feed
+            News
         </div>
 
         <div class="feed-block">
@@ -47,14 +47,14 @@
 
                     <div class="row">
                         <div class="col-12">
-                            <button type="submit" name="update" value="${news.id}">Update</button>
+                            <button style="width: 100%;" class="btn btn-primary"  type="submit" name="update" value="${news.id}">Update</button>
                         </div>
                     </div>
                 </form>
                 <div class="row">
                         <div class="col-12">
                             <form method="post" action="<%=request.getContextPath()%>/ServletDeleteNewsForMajor">
-                                <td><button type="submit" name="delete" value="${news.id}">Delete</button></td>
+                                <button style="width: 100%;" class="btn btn-primary"  type="submit" name="delete" value="${news.id}">Delete</button>
                             </form>
                         </div>
                     </div>

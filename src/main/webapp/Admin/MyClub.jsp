@@ -2,37 +2,51 @@
 <%@include file="/global/header.jsp"%>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/login.css"/>
 
-<div class="loginBlock">
+<style>
+    form{
+        width: 100%;
+    }
 
-    <c:forEach var="list" items="${ClubsByAdmin}">
-    <form method="post" action="<%=request.getContextPath()%>/ServletUpdateClubByAdmin">
-        <p>Title:</p>
-        <input type="text" name="title" value="${list.title}"> <br><br>
+    form input[type="submit"]{
+        width: 50%;
+    }
+</style>
 
-        <p>Description:</p>
-        <input type="text" name="description" value="${list.description}"> <br><br><br>
+<div class="col-12" style="text-align: center">
+    <center>
+        <div class="loginBlock">
+            <c:forEach var="list" items="${ClubsByAdmin}">
+            <form method="post" action="<%=request.getContextPath()%>/ServletUpdateClubByAdmin">
+                <p>Title:</p>
+                <input type="text" name="title" value="${list.title}"> <br><br>
 
-        <input type="submit" name="update" value="update">
-    </form>
+                <p>Description:</p>
+                <input type="text" name="description" value="${list.description}"> <br><br><br>
 
-    <br>
+                <input class="btn btn-primary" type="submit" name="update" value="update">
+            </form>
 
-    <form method="post" action="<%=request.getContextPath()%>/ServletDeleteClub">
-        <input type="submit" name="delete" value="delete">
-    </form>
+            <br>
 
-    <br>
+            <form method="post" action="<%=request.getContextPath()%>/ServletDeleteClub">
+                <input class="btn btn-primary" type="submit" name="delete" value="delete">
+            </form>
 
-    <form method="post" action="<%=request.getContextPath()%>/ServletNewsByClub">
-        <button type="submit" name="NEWS" value="${list.id}">NEWS</button>
-    </form>
+            <br>
 
-    <br>
+            <form method="post" action="<%=request.getContextPath()%>/ServletNewsByClub">
+                <button class="btn btn-primary" type="submit" name="NEWS" value="${list.id}">NEWS</button>
+            </form>
 
-    <form method="post" action="<%=request.getContextPath()%>/ServletEventsByClub">
-        <button type="submit" name="EVENTS" value="${list.id}">EVENTS</button>
-    </form>
-</c:forEach>
+            <br>
+
+            <form method="post" action="<%=request.getContextPath()%>/ServletEventsByClub">
+                <button class="btn btn-primary" type="submit" name="EVENTS" value="${list.id}">EVENTS</button>
+            </form>
+        </c:forEach>
+        </div>
+    </center>
 </div>
+
 
 <%@include file="/global/footer.jsp"%>

@@ -2,37 +2,31 @@
 <%@include file="/global/header.jsp"%>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/feed.css"/>
 
-<form method="post" action="<%=request.getContextPath()%>/ServletLogOut">
-    <input type="submit" value="logOut">
-</form>
+    <div class="col-md-8">
+        <form method="post" action="<%=request.getContextPath()%>/ServletLogOut">
+            <input class="btn btn-primary" type="submit" value="logOut">
+        </form>
 
-<a href="General/ChangePassword.jsp">Change Password</a>
-<c:if test="${Status.equals('Admin')}">
-    <form method="post" action="<%=request.getContextPath()%>/ServletFindStudent">
-    <input type="submit" value="Add Moderator">
-    </form>
-</c:if>
-<c:if test="${Status == 'Admin'}">
-    <form method="post" action="<%=request.getContextPath()%>/ServletClubsByAdmin">
-        <input type="submit" value="My Club">
-    </form>
-</c:if>
-<c:if test="${Status == 'Moderator'}">
-    <form method="post" action="<%=request.getContextPath()%>/ServletListOfClubsByModerator">
-        <input type="submit" value="My Club">
-    </form>
-</c:if>
-
-
-
+        <a href="General/ChangePassword.jsp">Change Password</a>
+        <c:if test="${Status.equals('Admin')}">
+            <form method="post" action="<%=request.getContextPath()%>/ServletFindStudent">
+                <input style="width: 100%;" class="btn btn-primary" type="submit" value="Add Moderator">
+            </form>
+        </c:if>
+        <c:if test="${Status == 'Admin'}">
+            <form method="post" action="<%=request.getContextPath()%>/ServletClubsByAdmin">
+                <input style="width: 100%;" class="btn btn-primary" type="submit" value="My Club">
+            </form>
+        </c:if>
+        <c:if test="${Status == 'Moderator'}">
+            <form method="post" action="<%=request.getContextPath()%>/ServletListOfClubsByModerator">
+                <input style="width: 100%;" class="btn btn-primary" type="submit" value="My Club">
+            </form>
+        </c:if>
 
 
-
-
-<div class="row">
-    <div class="col-md-8 col-sm-9 col-xs-12">
         <div class="title-block">
-            Feed
+            Clubs
         </div>
 
         <div class="feed-block">
@@ -54,12 +48,12 @@
                     <div class="row">
                         <div class="col-6">
                             <form action="<%=request.getContextPath()%>/ServletListOfNews" method="post">
-                                <button type="submit" name="NEWS" value="${Clubs.id}">News</button>
+                                <button style="width: 100%" class="btn btn-primary" type="submit" name="NEWS" value="${Clubs.id}">News</button>
                             </form>
                         </div>
                         <div class="col-6">
                             <form action="<%=request.getContextPath()%>/ServletListOfEvents" method="post">
-                                <button type="submit" name="EVENTS" value="${Clubs.id}">Events</button>
+                                <button style="width: 100%" class="btn btn-primary" type="submit" name="EVENTS" value="${Clubs.id}">Events</button>
                             </form>
                         </div>
                     </div>
@@ -80,7 +74,7 @@
                 <div class="post-type">
                     <textarea rows="2" name="TitleOfClub" id="new-post-title" placeholder="Title"></textarea><br><br>
                     <textarea rows="5" name="DescriptionOfClub" id="new-post-text" placeholder="Description"></textarea><br><br>
-                    <button onclick="createBtnPressed()">Create a club</button>
+                    <button class="btn btn-primary" onclick="createBtnPressed()">Create a club</button>
                 </div>
             </div>
         </c:if>

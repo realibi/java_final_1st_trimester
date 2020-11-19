@@ -12,19 +12,19 @@
             <p>Description:</p>
             <input type="text" name="description" value="${list.description}"> <br><br><br>
 
-            <input type="submit" name="update" value="update">
+            <input style="width: 100%;" class="btn btn-primary" type="submit" name="update" value="update">
         </form>
 
         <br>
 
         <form method="post" action="<%=request.getContextPath()%>/ServletNewsByModerator">
-            <td><button type="submit" name="NEWS" value="${list.id}">NEWS</button></td>
+            <button style="width: 100%;" class="btn btn-primary" type="submit" name="NEWS" value="${list.id}">NEWS</button>
         </form>
 
         <br>
 
         <form method="post" action="<%=request.getContextPath()%>/ServletEventsByModerator">
-            <td><button type="submit" name="EVENTS" value="${list.id}">EVENTS</button></td>
+            <button style="width: 100%;" class="btn btn-primary" type="submit" name="EVENTS" value="${list.id}">EVENTS</button>
         </form>
     </c:forEach>
 </div>
