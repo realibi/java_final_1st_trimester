@@ -5,54 +5,27 @@
       <artifact name="FinalProjectJava:war" />
     </artifacts-to-build>
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d768551-2b81-4e14-9bfd-43bcc4eddd4c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProjectJava.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProjectJava.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin/AddingModerators.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin/AddingModerators.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin/EventsByClub.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin/EventsByClub.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin/MyClub.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin/MyClub.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin/NewsByClub.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin/NewsByClub.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/General/ChangePassword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/General/ChangePassword.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/General/ListOfClubs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/General/ListOfClubs.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/General/ListOfEvents.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/General/ListOfEvents.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/General/ListOfNews.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/General/ListOfNews.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/General/LogIn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/General/LogIn.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/MajorAdmin/ListOfClubs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/MajorAdmin/ListOfClubs.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/MajorAdmin/ListOfEvents.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/MajorAdmin/ListOfEvents.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/MajorAdmin/ListOfNews.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/MajorAdmin/ListOfNews.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/MajorAdmin/ListOfRequestedClubs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/MajorAdmin/ListOfRequestedClubs.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Moderator/EventsByModerator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Moderator/EventsByModerator.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Moderator/ListOfClubsByModerator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Moderator/ListOfClubsByModerator.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Moderator/NewsByModerator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Moderator/NewsByModerator.jsp" afterDir="false" />
+    <list default="true" id="6d768551-2b81-4e14-9bfd-43bcc4eddd4c" name="Default Changelist" comment="all buttons styles changed">
       <change beforePath="$PROJECT_DIR$/src/main/webapp/global/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/global/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/feed.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/feed.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Admin/AddingModerators.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Admin/AddingModerators.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Admin/EventsByClub.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Admin/EventsByClub.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Admin/MyClub.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Admin/MyClub.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Admin/NewsByClub.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Admin/NewsByClub.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/General/ChangePassword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/General/ChangePassword.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/General/ListOfClubs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/General/ListOfClubs.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/General/ListOfEvents.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/General/ListOfEvents.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/General/ListOfNews.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/General/ListOfNews.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/General/LogIn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/General/LogIn.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/MajorAdmin/ListOfClubs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/MajorAdmin/ListOfClubs.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/MajorAdmin/ListOfEvents.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/MajorAdmin/ListOfEvents.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/MajorAdmin/ListOfNews.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/MajorAdmin/ListOfNews.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/MajorAdmin/ListOfRequestedClubs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/MajorAdmin/ListOfRequestedClubs.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Moderator/EventsByModerator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Moderator/EventsByModerator.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Moderator/ListOfClubsByModerator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Moderator/ListOfClubsByModerator.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Moderator/NewsByModerator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Moderator/NewsByModerator.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/WEB-INF/classes/css/feed.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/WEB-INF/classes/css/feed.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/WEB-INF/classes/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/WEB-INF/classes/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/WEB-INF/classes/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/WEB-INF/classes/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/global/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/global/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/resources/css/feed.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/resources/css/feed.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/resources/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/resources/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/resources/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,12 +146,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605764440676</updated>
-      <workItem from="1605764445414" duration="8464000" />
+      <workItem from="1605764445414" duration="8746000" />
     </task>
+    <task id="LOCAL-00001" summary="all buttons styles changed">
+      <created>1605774488862</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605774488862</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="all buttons styles changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="all buttons styles changed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605764659559">
