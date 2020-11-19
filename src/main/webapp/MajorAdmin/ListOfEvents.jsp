@@ -11,60 +11,60 @@
     }
 </style>
 
-<form method="post" action="<%=request.getContextPath()%>/ServletLogOut">
-    <input type="submit" value="logOut">
-</form>
 
-<form method="post" action="<%=request.getContextPath()%>/ServletListOfClubsForMajor">
-    <input type="submit" value="Back">
-</form>
+<div class="col-12">
+    <form method="post" action="<%=request.getContextPath()%>/ServletLogOut">
+        <input style="width: 100%;" class="btn btn-primary" type="submit" value="logOut">
+    </form>
 
-<div class="row">
-    <div class="col-md-8 col-sm-9 col-xs-12">
-        <div class="title-block">
-            Events
-        </div>
+    <form method="post" action="<%=request.getContextPath()%>/ServletListOfClubsForMajor">
+        <input style="width: 100%;" class="btn btn-primary" type="submit" value="Back">
+    </form>
 
-        <div class="feed-block">
+    <div class="title-block">
+        Events
+    </div>
 
-            <c:forEach var="events" items="${EventForMajor}">
-                <form method="post" action="<%=request.getContextPath()%>/ServletUpdateEventForMajor">
-                    <div class="student-info">
-                        <div class="student-info-title">Title:</div>
-                        <div class="student-info-text">
-                            <input type="text" name="title" value="${events.title}">
-                        </div>
-                    </div>
+    <div class="feed-block">
 
-                    <div class="student-info">
-                        <div class="student-info-title">Description:</div>
-                        <div class="student-info-text">
-                            <input type="text" name="description" value="${events.description}">
-                        </div>
-                    </div>
-
-                    <br>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <button type="submit" name="update" value="${events.id}">Update</button>
-                        </div>
-                    </div>
-                </form>
-                <div class="row">
-                    <div class="col-12">
-                        <form method="post" action="<%=request.getContextPath()%>/ServletDeleteEventsForMajor">
-                            <td><button type="submit" name="delete" value="${events.id}">Delete</button></td>
-                        </form>
+        <c:forEach var="events" items="${EventForMajor}">
+            <form method="post" action="<%=request.getContextPath()%>/ServletUpdateEventForMajor">
+                <div class="student-info">
+                    <div class="student-info-title">Title:</div>
+                    <div class="student-info-text">
+                        <input type="text" name="title" value="${events.title}">
                     </div>
                 </div>
-                </form>
-                <hr>
-                <br>
-            </c:forEach>
 
-        </div>
+                <div class="student-info">
+                    <div class="student-info-title">Description:</div>
+                    <div class="student-info-text">
+                        <input type="text" name="description" value="${events.description}">
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <div class="col-12">
+                        <button style="width: 100%;" class="btn btn-primary" type="submit" name="update" value="${events.id}">Update</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-12">
+                    <form method="post" action="<%=request.getContextPath()%>/ServletDeleteEventsForMajor">
+                        <button style="width: 100%;" class="btn btn-primary" type="submit" name="delete" value="${events.id}">Delete</button>
+                    </form>
+                </div>
+            </div>
+            </form>
+            <hr>
+            <br>
+        </c:forEach>
+
     </div>
 </div>
+
 
 <%@include file="/global/footer.jsp"%>

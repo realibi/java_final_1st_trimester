@@ -108,26 +108,26 @@
             <br>
             <div class="post-type">
                 <form method="post" action="<%=request.getContextPath()%>/ServletOutPutListOfStudents">
-                    <input type="search" name="searchUser"><br>
+                    <input type="search" name="searchUser"><br><br>
                     <select name="SelectMajors">
                         <option selected>Chose Major</option>
                         <c:forEach var="Major" items="${selectAllMajors}">
                             <option value="${Major.student_Major}">${Major.student_Major}</option>
                         </c:forEach>
-                    </select><br>
+                    </select><br><br>
                     <select name="SelectGroups">
                         <option selected>Chose Group</option>
                         <c:forEach var="Groups" items="${selectAllGroups}"><
                             <option value="${Groups.student_Group}">${Groups.student_Group}</option>
                         </c:forEach>
-                    </select><br>
+                    </select><br><br>
                     <select name="SelectYear">
                         <option selected>Chose Year</option>
                         <c:forEach var="Year" items="${selectAllAcademicYears}"><
                             <option value="${Year.academicYear}">${Year.academicYear}</option>
                         </c:forEach>
-                    </select><br>
-                    <input class="btn btn-primary" type="submit">
+                    </select><br><br>
+                    <input style="color:#fff;" class="btn btn-primary" type="submit" value="Find">
                 </form>
             </div>
         </div>
@@ -142,7 +142,7 @@
                 <p>${List.name}</p>
                 <p>${List.surname}</p>
                 <input type="email" name="Email" value="${List.email}" readonly><br><br>
-                <input class="btn btn-primary" type="submit" name="delete" value="delete">
+                <input style="color:#fff;" class="btn btn-primary" type="submit" name="delete" value="delete">
             </form>
             <br>
             <hr>

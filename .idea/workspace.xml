@@ -24,8 +24,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d768551-2b81-4e14-9bfd-43bcc4eddd4c" name="Default Changelist" comment="all buttons styles changed">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/global/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/global/header.jsp" afterDir="false" />
+    <list default="true" id="6d768551-2b81-4e14-9bfd-43bcc4eddd4c" name="Default Changelist" comment="content margin changed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin/AddingModerators.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin/AddingModerators.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/MajorAdmin/ListOfEvents.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/MajorAdmin/ListOfEvents.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/MajorAdmin/ListOfNews.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/MajorAdmin/ListOfNews.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Admin/AddingModerators.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/Admin/AddingModerators.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/MajorAdmin/ListOfEvents.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/MajorAdmin/ListOfEvents.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/MajorAdmin/ListOfNews.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/MajorAdmin/ListOfNews.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/WEB-INF/classes/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/WEB-INF/classes/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/global/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/global/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/FinalProjectJava-1.0-SNAPSHOT/resources/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +157,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605764440676</updated>
-      <workItem from="1605764445414" duration="8746000" />
+      <workItem from="1605764445414" duration="9235000" />
     </task>
     <task id="LOCAL-00001" summary="all buttons styles changed">
       <created>1605774488862</created>
@@ -155,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605774488862</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="content margin changed">
+      <created>1605774543638</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605774543638</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +192,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="all buttons styles changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="all buttons styles changed" />
+    <MESSAGE value="content margin changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="content margin changed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605764659559">
@@ -237,6 +256,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="440" y="99" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1605764609463" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605774555916">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1605774555916" />
     <state x="664" y="416" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1605764602371">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
