@@ -27,8 +27,6 @@ public class ServletCreateRequestClub extends HttpServlet {
 
         ServletListOfClubs servletListOfClubs = new ServletListOfClubs();
         servletListOfClubs.doPost(request,response);
-
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

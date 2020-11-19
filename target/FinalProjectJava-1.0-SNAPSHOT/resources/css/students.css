@@ -1,0 +1,40 @@
+.student-item{
+    width: 100%;
+
+    display: grid;
+    grid-template-areas: 'top'
+                        'bottom';
+    grid-column-gap: 2%;
+
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.top{
+    width: 100%;
+    grid-area: top;
+}
+
+.bottom{
+    width: 100%;
+    grid-area: bottom;
+}
+
+.student-item{
+    padding: 3%;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    background-color: #147db9;
+    margin-top: 10px;
+}
+
+.student-info-title{
+    float: left;
+}
+
+#fullName, #email, #group, #major,
+#year-admission, #year-graduation{
+    width: 100%;
+    text-align: right;
+}

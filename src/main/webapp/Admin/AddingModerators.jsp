@@ -15,6 +15,10 @@
     <input type="submit" value="logOut">
 </form>
 
+<form method="post" action="<%=request.getContextPath()%>/ServletListOfClubs">
+    <input type="submit" value="back">
+</form>
+
 <a href="General/ChangePassword.jsp">Change Password</a>
 <c:if test="${Status.equals('Admin')}">
     <form method="post" action="<%=request.getContextPath()%>/ServletFindStudent">
@@ -46,35 +50,44 @@
                     <div class="student-info">
                         <div class="student-info-title">Email:</div>
                         <div class="student-info-text">
-                            <input type="text" value="${Info.student_Email}" name="UserEmail">
+                            <input type="text" value="${Info.student_Email}" name="UserEmail" readonly>
                         </div>
                     </div>
+
+
+                    <div class="student-info">
+                        <div class="student-info-title">Name:</div>
+                        <div class="student-info-text">
+                            <input type="text" value="${Info.student_Name}" name="UserName" readonly>
+                        </div>
+                    </div>
+
 
                     <div class="student-info">
                         <div class="student-info-title">Surname:</div>
                         <div class="student-info-text">
-                            <input type="text" value="${Info.student_Surname}" name="UserSurname">
+                            <input type="text" value="${Info.student_Surname}" name="UserSurname" readonly>
                         </div>
                     </div>
 
                     <div class="student-info">
                         <div class="student-info-title">Major:</div>
                         <div class="student-info-text">
-                            <input type="text" value="${Info.student_Major}">
+                            <input type="text" value="${Info.student_Major}" readonly>
                         </div>
                     </div>
 
                     <div class="student-info">
                         <div class="student-info-title">Group:</div>
                         <div class="student-info-text">
-                            <input type="text" value="${Info.student_Group}">
+                            <input type="text" value="${Info.student_Group}" readonly>
                         </div>
                     </div>
 
                     <div class="student-info">
                         <div class="student-info-title">Academic year:</div>
                         <div class="student-info-text">
-                            <input type="number" value="${Info.academicYear}">
+                            <input type="number" value="${Info.academicYear}" readonly>
                         </div>
                     </div>
 
@@ -130,7 +143,7 @@
                 <form method="post" action="<%=request.getContextPath()%>/ServletDeleteModerator">
                     <p>${List.name}</p>
                     <p>${List.surname}</p>
-                    <input type="email" name="Email" value="${List.email}"><br><br>
+                    <input type="email" name="Email" value="${List.email}" readonly><br><br>
                     <input type="submit" name="delete" value="delete">
                 </form>
                 <br>

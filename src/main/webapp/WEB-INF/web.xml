@@ -396,4 +396,14 @@
         <url-pattern>/ServletDeleteEventsForMajor</url-pattern>
     </servlet-mapping>
 
+
+    <servlet>
+        <servlet-name>ServletCreateIdForNews</servlet-name>
+        <servlet-class>MajorAdmin.ServletCreateIdForNews</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletCreateIdForNews</servlet-name>
+        <url-pattern>/ServletCreateIdForNews</url-pattern>
+    </servlet-mapping>
+
 </web-app>

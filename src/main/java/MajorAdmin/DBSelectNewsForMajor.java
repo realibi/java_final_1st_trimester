@@ -1,0 +1,90 @@
+package MajorAdmin;
+
+import AbstractClasses.GetConnection;
+import NewsByClub.NewsByClub;
+
+import javax.enterprise.inject.New;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Queue;
+
+public class DBSelectNewsForMajor extends GetConnection {
+
+    protected Queue<SelectNewsByClub> SelectNewsByClub(int Club_id) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        Queue<SelectNewsByClub> selectNewsByClubs = new ArrayDeque<>();
+
+
+        try {
+            connection = getConnection();
+            preparedStatement = connection.prepareStatement("select Id, News_Title, News_description from news where Club_Id = ?");
+            preparedStatement.setInt(1, Club_id);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+
+                SelectNewsByClub selectNewsByClub = new SelectNewsByClub();
+
+                selectNewsByClub.setId(resultSet.getInt("Id"));
+                selectNewsByClub.setTitle(resultSet.getString("News_Title"));
+                selectNewsByClub.setDescription(resultSet.getString("News_description"));
+                selectNewsByClubs.add(selectNewsByClub);
+            }
+
+            preparedStatement.close();
+            resultSet.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return selectNewsByClubs;
+    }
+
+    protected void DeleteNews(int id) {
+
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            connection = getConnection();
+            preparedStatement = connection.prepareStatement("delete from news where Id =?");
+            preparedStatement.setInt(1, id);
+            preparedStatement.executeUpdate();
+
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    protected void UpdateNews(String Title, String Description, int id) {
+
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            connection = getConnection();
+            preparedStatement = connection.prepareStatement("update news set News_Title = ?, News_description = ? where Id = ?");
+            preparedStatement.setString(1, Title);
+            preparedStatement.setString(2, Description);
+            preparedStatement.setInt(3, id);
+
+            preparedStatement.executeUpdate();
+
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+}

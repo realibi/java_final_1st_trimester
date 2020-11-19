@@ -1,0 +1,28 @@
+package NewsByModerator;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@WebServlet(name = "ServletUpdateNewsByModerator")
+public class ServletUpdateNewsByModerator extends HttpServlet {
+    DBNewsByModerator db = new DBNewsByModerator();
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String title = request.getParameter("title");
+        String description = request.getParameter("description");
+        int update = Integer.parseInt(request.getParameter("update"));
+        db.UpdateNews(title, description, update);
+        ServletNewsByModerator ser = new ServletNewsByModerator();
+        ser.doPost(request, response);
+
+
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+}

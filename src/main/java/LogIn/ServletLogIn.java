@@ -55,6 +55,11 @@ public class ServletLogIn extends HttpServlet {
                 ServletListOfClubsForMajor ser = new ServletListOfClubsForMajor();
                 ser.doPost(request, response);
             }
+            else {
+
+                request.getRequestDispatcher("General/LogIn.jsp").forward(request, response);
+
+            }
 
 
         }
